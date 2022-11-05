@@ -7,6 +7,8 @@
 
 #include <map>
 
+#include "Venta.h"
+
 using namespace std;
 
 class Caja {

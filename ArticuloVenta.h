@@ -5,6 +5,9 @@
 #ifndef BASE_CPP_ARTICULOVENTA_H
 #define BASE_CPP_ARTICULOVENTA_H
 
+#include "Articulo.h"
+
+using namespace std;
 
 class ArticuloVenta {
 private:
