@@ -9,6 +9,8 @@
 #include <map>
 #include <vector>
 
+#include "Articulo.h"
+
 using namespace std;
 
 const int CAJAS = 5;

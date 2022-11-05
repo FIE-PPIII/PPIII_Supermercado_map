@@ -61,6 +61,12 @@ build CMakeFiles/base_cpp.dir/Supermercado.cpp.obj: CXX_COMPILER__base_cpp_Debug
   OBJECT_DIR = CMakeFiles\base_cpp.dir
   OBJECT_FILE_DIR = CMakeFiles\base_cpp.dir
 
+build CMakeFiles/base_cpp.dir/Articulo.cpp.obj: CXX_COMPILER__base_cpp_Debug C$:/Users/Usuario/FIE/Practica$ Paradigmas$ III/PPIII_Supermercado_map/Articulo.cpp || cmake_object_order_depends_target_base_cpp
+  DEP_FILE = CMakeFiles\base_cpp.dir\Articulo.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\base_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\base_cpp.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target base_cpp
@@ -69,7 +75,7 @@ build CMakeFiles/base_cpp.dir/Supermercado.cpp.obj: CXX_COMPILER__base_cpp_Debug
 #############################################
 # Link the executable base_cpp.exe
 
-build base_cpp.exe: CXX_EXECUTABLE_LINKER__base_cpp_Debug CMakeFiles/base_cpp.dir/main.cpp.obj CMakeFiles/base_cpp.dir/Supermercado.cpp.obj
+build base_cpp.exe: CXX_EXECUTABLE_LINKER__base_cpp_Debug CMakeFiles/base_cpp.dir/main.cpp.obj CMakeFiles/base_cpp.dir/Supermercado.cpp.obj CMakeFiles/base_cpp.dir/Articulo.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\base_cpp.dir
