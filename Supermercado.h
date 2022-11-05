@@ -29,9 +29,25 @@ public:
 
     string obtenerNombre() const;
     string obtenerDireccion() const;
-    
+
 
 };
+
+inline void Supermercado::asignarNombre(const string n) {
+    this->nombre = n;
+}
+
+inline void Supermercado::asignarDireccion(const string d) {
+    this->direccion = d;
+}
+
+inline string Supermercado::obtenerNombre() const {
+    return this->nombre;
+}
+
+inline string Supermercado::obtenerDireccion() const {
+    return this->direccion;
+}
 
 
 #endif //BASE_CPP_SUPERMERCADO_H
