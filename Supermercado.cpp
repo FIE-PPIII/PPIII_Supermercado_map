@@ -3,8 +3,6 @@
 //
 
 #include "Supermercado.h"
-#include "Caja.h"
-#include "Articulo.h"
 
 using namespace std;
 

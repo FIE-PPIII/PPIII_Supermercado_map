@@ -10,6 +10,7 @@
 #include <vector>
 
 #include "Articulo.h"
+#include "Caja.h"
 
 using namespace std;
 
