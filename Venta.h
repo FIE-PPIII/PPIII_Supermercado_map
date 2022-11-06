@@ -42,5 +42,9 @@ inline const map<int, ArticuloVenta> & Venta::obtenerArticulos() const {
     return this->articulos;
 }
 
+inline double Venta::obtenerMontoVenta() const {
+    return this->monto;
+}
+
 
 #endif //BASE_CPP_VENTA_H
