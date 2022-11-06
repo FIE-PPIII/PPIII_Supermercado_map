@@ -6,8 +6,6 @@
 
 using namespace std;
 
-ArticuloVenta::ArticuloVenta() {}
-
 ArticuloVenta::ArticuloVenta(Articulo* pArticulo, int cantidad) {
     this->pArticulo = pArticulo;
     this->cantidad = cantidad;
