@@ -17,6 +17,7 @@ private:
     int cantidad;
 
 public:
+    Articulo();
     Articulo(const int, const string, const double, const int);
     ~Articulo();
 
