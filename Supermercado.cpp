@@ -51,3 +51,34 @@ void Supermercado::ingresarVentas() {
     venta_7.insertarArticuloVenta(&(this->stock.at(1212)), 2);
     this->cajas[0].insertarVenta(venta_7);
 }
+
+void Supermercado::mostrarArticulos(const string mensaje) {
+    cout<<mensaje<<endl;
+    for (map<int, Articulo>::const_iterator it = this->stock.begin(); it != this->stock.end(); it++)
+        cout<<"Codigo: "<<(it->first)<<" - articulo: "<<(it->second.obtenerNombre())<<
+        " - precio: "<<(it->second.obtenerPrecio())<<" - cantidad: "<<(it->second.obtenerCantidad())
+        <<endl;
+}
+
+void Supermercado::mostrarMontoCajas(const string mensaje) {
+    cout<<mensaje<<endl;
+    for (int i = 0; i < CAJAS; i++)
+        cout<<"Caja: "<<this->cajas[i].obtenerNroCaja()<<" - monto:"
+        <<this->cajas[i].obtenerMontoCaja()<<endl;
+}
+
+void Supermercado::mostrarVentasCaja(const string mensaje) {
+    cout<<mensaje<<endl;
+    for (int i = 0; i < CAJAS; i++) {
+        cout<<"Caja "<<this->cajas[i].obtenerNroCaja()<<": "<<endl;
+        map<int, Venta> temp_ventas = this->cajas[i].obtenerVentas();
+        for (map<int, Venta>::const_iterator it = temp_ventas.begin(); it != temp_ventas.end(); it++) {
+            cout<<"NroTicket: "<<(it->first)<<" - Total: $"<<(it->second.obtenerMontoVenta())<<endl;
+            map<int, ArticuloVenta> temp_articulo = it->second.obtenerArticulos();
+            for (map<int, ArticuloVenta>::const_iterator it_art = temp_articulo.begin(); it_art != temp_articulo.end(); it_art++) {
+                cout<<"Codigo: "<<(it_art->first)<<" - articulo: "<<(it_art->second.obtenerArticulo()->obtenerNombre())<<" - "
+                <<(it_art->second.obtenerCantidad())<<" X $"<<(it_art->second.obtenerPrecio())<<endl;
+            }
+        }
+    }
+}

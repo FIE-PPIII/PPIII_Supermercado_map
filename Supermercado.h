@@ -35,6 +35,9 @@ public:
 
     void ingresarArticulos();
     void ingresarVentas();
+    void mostrarArticulos(const string);
+    void mostrarMontoCajas(const string);
+    void mostrarVentasCaja(const string);
 
 };
 
