@@ -22,11 +22,14 @@ void Venta::insertarArticuloVenta(Articulo * art, const int cant) {
     else {
         this->articulos[art->obtenerCodigo()].agregarCantidad(cant);
     }
+    this->monto += art->obtenerPrecio() * cant;
 }
 
 void Venta::borrarArticuloVenta(const int codigo) {
     if (this->articulos.find(codigo) != this->articulos.end()) {
-        this->articulos[codigo].cancelarVentaArticulo();
+        ArticuloVenta aux = this->articulos[codigo];
+        this->monto -= aux.obtenerPrecio() * aux.obtenerCantidad();
+        aux.cancelarVentaArticulo();
         this->articulos.erase(codigo);
     }
 }
