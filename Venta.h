@@ -29,8 +29,8 @@ public:
     const map<int, ArticuloVenta> & obtenerArticulos() const;
     double obtenerMontoVenta() const;
 
-    void insertarArticuloVenta(const Articulo*, const int);
-    void borrarArticuloVenta(const Articulo*);
+    void insertarArticuloVenta(Articulo*, const int);
+    void borrarArticuloVenta(Articulo*);
     void borrarArticuloVenta(const int);
 };
 
