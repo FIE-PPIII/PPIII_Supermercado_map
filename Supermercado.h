@@ -34,6 +34,7 @@ public:
     string obtenerDireccion() const;
 
     void ingresarArticulos();
+    void ingresarVentas();
 
 };
 
