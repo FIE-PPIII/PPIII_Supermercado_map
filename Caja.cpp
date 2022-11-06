@@ -12,3 +12,8 @@ Caja::Caja(const int num) {
 }
 
 Caja::~Caja() {}
+
+void Caja::insertarVenta(const Venta & venta) {
+    this->ventas[venta.obtenerNroTicket()] = venta;
+    this->monto += venta.obtenerMontoVenta();
+}

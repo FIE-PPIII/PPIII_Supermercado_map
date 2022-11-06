@@ -24,6 +24,8 @@ public:
     int obtenerNroCaja() const;
     const map<int, Venta> & obtenerVentas() const;
     double obtenerMontoCaja() const;
+
+    void insertarVenta(const Venta &);
 };
 
 inline int Caja::obtenerNroCaja() const {
