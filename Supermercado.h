@@ -33,6 +33,7 @@ public:
     string obtenerNombre() const;
     string obtenerDireccion() const;
 
+    void ingresarArticulos();
 
 };
 

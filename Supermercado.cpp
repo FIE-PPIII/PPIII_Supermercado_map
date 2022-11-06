@@ -14,3 +14,9 @@ Supermercado::Supermercado(const string nombre, const string direccion) {
 }
 
 Supermercado::~Supermercado() {}
+
+void Supermercado::ingresarArticulos() {
+    this->stock[2323] = Articulo(2323, "Leche", 63.14, 30);
+    this->stock[4545] = Articulo(4545, "Manteca", 87.23, 45);
+    this->stock[1212] = Articulo(1212, "Jugo", 52.28, 92);
+}
