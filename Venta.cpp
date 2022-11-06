@@ -17,17 +17,17 @@ Venta::~Venta() {}
 
 void Venta::insertarArticuloVenta(Articulo * art, const int cant) {
     if (this->articulos.find(art->obtenerCodigo()) == this->articulos.end()) {
-        this->articulos[art->obtenerCodigo()] = ArticuloVenta(art, cant);
+        this->articulos.emplace(art->obtenerCodigo(), ArticuloVenta(art, cant));
     }
     else {
-        this->articulos[art->obtenerCodigo()].agregarCantidad(cant);
+        this->articulos.at(art->obtenerCodigo()).agregarCantidad(cant);
     }
     this->monto += art->obtenerPrecio() * cant;
 }
 
 void Venta::borrarArticuloVenta(const int codigo) {
     if (this->articulos.find(codigo) != this->articulos.end()) {
-        ArticuloVenta aux = this->articulos[codigo];
+        ArticuloVenta aux = this->articulos.at(codigo);
         this->monto -= aux.obtenerPrecio() * aux.obtenerCantidad();
         aux.cancelarVentaArticulo();
         this->articulos.erase(codigo);

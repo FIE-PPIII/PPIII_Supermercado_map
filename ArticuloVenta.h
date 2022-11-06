@@ -16,7 +16,6 @@ private:
     double precio;
 
 public:
-    ArticuloVenta();
     ArticuloVenta(Articulo*, int);
     ~ArticuloVenta();
 

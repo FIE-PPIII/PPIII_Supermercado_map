@@ -6,8 +6,6 @@
 
 using namespace std;
 
-Articulo::Articulo() {}
-
 Articulo::Articulo(const int codigo, const string nombre, const double precio, const int cant) {
     this->codigo = codigo;
     this->nombre = nombre;
