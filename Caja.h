@@ -36,6 +36,9 @@ inline const map<int, Venta> & Caja::obtenerVentas() const {
     return this->ventas;
 }
 
+inline double Caja::obtenerMontoCaja() const {
+    return this->monto;
+}
 
 
 #endif //BASE_CPP_CAJA_H
