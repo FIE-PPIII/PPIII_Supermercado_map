@@ -14,3 +14,23 @@ Venta::Venta() {
 }
 
 Venta::~Venta() {}
+
+void Venta::insertarArticuloVenta(Articulo * art, const int cant) {
+    if (this->articulos.find(art->obtenerCodigo()) == this->articulos.end()) {
+        this->articulos[art->obtenerCodigo()] = ArticuloVenta(art, cant);
+    }
+    else {
+        this->articulos[art->obtenerCodigo()].agregarCantidad(cant);
+    }
+}
+
+void Venta::borrarArticuloVenta(const int codigo) {
+    if (this->articulos.find(codigo) != this->articulos.end()) {
+        this->articulos[codigo].cancelarVentaArticulo();
+        this->articulos.erase(codigo);
+    }
+}
+
+void Venta::borrarArticuloVenta(Articulo * art) {
+    this->borrarArticuloVenta(art->obtenerCodigo());
+}
