@@ -23,7 +23,8 @@ public:
     int obtenerCantidad() const;
     double obtenerPrecio() const;
 
-    void asignarCantidad(int);
+    void agregarCantidad(int);
+    void cancelarVentaArticulo();
 };
 
 inline Articulo* ArticuloVenta::obtenerArticulo() const {
@@ -36,10 +37,6 @@ inline int ArticuloVenta::obtenerCantidad() const {
 
 inline double ArticuloVenta::obtenerPrecio() const {
     return this->precio;
-}
-
-inline void ArticuloVenta::asignarCantidad(int cant) {
-    this->cantidad = cant;
 }
 
 
